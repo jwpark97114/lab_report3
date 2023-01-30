@@ -99,14 +99,14 @@ After running the code, I tried the following lines.
 
 For this request
 
-> * `handleRequest(URI url)`
-> * `getQuery().split("=")`
-> * `String.format(returnS)`
+> `handleRequest(URI url)`
+> `getQuery().split("=")`
+> `String.format(returnS)`
 
 are called, and the parameters
 
-> `url` equals http://localhost:5000/add-message?s=abcd
-> `returnS` equals "abcd"
+> * `url` equals http://localhost:5000/add-message?s=abcd
+> * `returnS` equals "abcd"
 
 
 
