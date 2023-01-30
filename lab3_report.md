@@ -6,7 +6,7 @@ To create StringServer, I used the server structure we had on our second lab fil
 So the codes are as follows
 
 ```
-{
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
@@ -90,3 +90,19 @@ class StringServer {
 }
 
 ``` 
+
+After running the code, I tried the following lines.
+
+>http://localhost:5000/add-message?s=abcd
+
+![cap1](https://user-images.githubusercontent.com/66867608/215407184-f98aa6cd-5d86-4086-8129-80b16334e953.png)
+
+
+
+>http://localhost:5000/add-message?s=icici
+
+![cap2](https://user-images.githubusercontent.com/66867608/215407215-a98211d0-8f5e-4c36-b6f7-ca3adf93c4be.png)
+
+
+
+
