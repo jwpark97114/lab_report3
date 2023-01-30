@@ -1,4 +1,4 @@
-# String Server and its tests
+# StringServer and JUnit
 
 **Implementing String Server in Java**
 
@@ -97,6 +97,17 @@ After running the code, I tried the following lines.
 
 ![cap1](https://user-images.githubusercontent.com/66867608/215407184-f98aa6cd-5d86-4086-8129-80b16334e953.png)
 
+For this request
+
+> * `handleRequest(URI url)`
+> * `getQuery().split("=")`
+> * `String.format(returnS)`
+
+are called, and the parameters
+
+> `url` equals http://localhost:5000/add-message?s=abcd
+> `returnS` equals "abcd"
+
 
 
 >http://localhost:5000/add-message?s=icici
@@ -104,5 +115,5 @@ After running the code, I tried the following lines.
 ![cap2](https://user-images.githubusercontent.com/66867608/215407215-a98211d0-8f5e-4c36-b6f7-ca3adf93c4be.png)
 
 
-
+**JUnit Tests from lab 3**
 
