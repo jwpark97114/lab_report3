@@ -152,13 +152,14 @@ Successful test:
 ```
 @Test
 public void testReversed(){
-int[] original = {null};
-int[] reversed = {null};
+int[] original = {0};
+int[] reversed = {0};
 assertArrayEquals(reversed, ArrayExamples.reversed(original));
 }
 ```
+<img width="876" alt="스크린샷 2023-01-29 오후 11 31 11" src="https://user-images.githubusercontent.com/66867608/215414722-172a5f51-9ae3-4c1e-ab3e-86d124963981.png">
 
-<img width="876" alt="스크린샷 2023-01-29 오후 11 17 16" src="https://user-images.githubusercontent.com/66867608/215412506-b2f704c0-41f4-46a2-9ca7-b6d2cb8cee96.png">
+
 
 
 Then by changing the code from this one 
@@ -191,8 +192,8 @@ I was able to get successful results as follows
 
 The reason it was causing error was due to the line `arr[i] = newArray[arr.length - i - 1];`
 
-It was assigning null to `arr[i]` the whole time as newArray was a newly created array filled with null.
-Then the line `return arr` returned original arr filled with null.
+It was assigning 0 to `arr[i]` the whole time as newArray was a newly created array filled with 0.
+Then the line `return arr` returned original arr filled with 0.
 
 So by changing it as `newArray[i] = arr[arr.length - i - 1];` and return newArray, I was able to fix the problem.
 
