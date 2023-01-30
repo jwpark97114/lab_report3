@@ -1,4 +1,4 @@
-# StringServer and JUnit
+# StringServer and JUnit Jongwoo Park
 
 **Implementing String Server in Java**
 
