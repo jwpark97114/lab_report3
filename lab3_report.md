@@ -131,5 +131,10 @@ And then as `String[] inputLust` is now {"abcd", "icici", null, ... , null}
 
 
 
-**JUnit Tests from lab 3**
+** JUnit Tests from lab 3 **
+
+While testing the reversed method from ArrayTests, I found the following results
+
+*Failure inducing input*
+
 
