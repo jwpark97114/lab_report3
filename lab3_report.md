@@ -135,6 +135,70 @@ And then as `String[] inputLust` is now {"abcd", "icici", null, ... , null}
 
 While testing the reversed method from ArrayTests, I found the following results
 
-*Failure inducing input*
+Failure inducing test:
+```
+@Test
+public void testReversed(){
+int[] original = {1,2,3,4};
+int[] reversed = {4,3,2,1,};
+assertArrayEquals(reversed, ArrayExamples.reversed(original));
+}
+```
+
+<img width="689" alt="스크린샷 2023-01-26 오전 10 34 37" src="https://user-images.githubusercontent.com/66867608/215412383-6bcd89fb-b787-4d7e-8c5a-b3f223599690.png">
+
+
+Successful test:
+```
+@Test
+public void testReversed(){
+int[] original = {null};
+int[] reversed = {null};
+assertArrayEquals(reversed, ArrayExamples.reversed(original));
+}
+```
+
+<img width="876" alt="스크린샷 2023-01-29 오후 11 17 16" src="https://user-images.githubusercontent.com/66867608/215412506-b2f704c0-41f4-46a2-9ca7-b6d2cb8cee96.png">
+
+
+Then by changing the code from this one 
+
+```
+  static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+  }
+```
+
+to this one
+
+```
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[arr.length - i - 1];
+    }
+    return newArray;
+  }
+```
+
+I was able to get successful results as follows
+
+<img width="876" alt="스크린샷 2023-01-29 오후 11 17 51" src="https://user-images.githubusercontent.com/66867608/215412989-e505cf17-5dfa-4b3a-8b9d-8cf7b84ff784.png">
+
+The reason it was causing error was due to the line `arr[i] = newArray[arr.length - i - 1];`
+
+It was assigning null to `arr[i]` the whole time as newArray was a newly created array filled with null.
+Then the line `return arr` returned original arr filled with null.
+
+So by changing it as `newArray[i] = arr[arr.length - i - 1];` and return newArray, I was able to fix the problem.
+
+
+**Part 3**
+
+I was able to learn how http requests and responses are made. As I never studied how web pages work, I feel like I'm now starting to understand the basics of internet structure, and I hope to expand my interest into detailed webpages or networks in the near future. 
 
 
