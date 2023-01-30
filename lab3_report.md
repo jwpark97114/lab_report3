@@ -97,22 +97,38 @@ After running the code, I tried the following lines.
 
 ![cap1](https://user-images.githubusercontent.com/66867608/215407184-f98aa6cd-5d86-4086-8129-80b16334e953.png)
 
-For this request
+After this request
 
 > `handleRequest(URI url)`
 > `getQuery().split("=")`
 > `String.format(returnS)`
 
-are called, and the parameters
+are called, and the parameters are like
 
 > * `url` equals http://localhost:5000/add-message?s=abcd
 > * `returnS` equals "abcd"
+
+And then as `String[] inputLust` is now {"abcd", null, null, ... , null}
 
 
 
 >http://localhost:5000/add-message?s=icici
 
 ![cap2](https://user-images.githubusercontent.com/66867608/215407215-a98211d0-8f5e-4c36-b6f7-ca3adf93c4be.png)
+
+After this request the same
+
+> `handleRequest(URI url)`
+> `getQuery().split("=")`
+> `String.format(returnS)`
+
+are called, and the parameters are like
+
+> * `url` equals `http://localhost:5000/add-message?s=icici`
+> * `returnS` equals `"abcd \n icici"`
+
+And then as `String[] inputLust` is now {"abcd", "icici", null, ... , null}
+
 
 
 **JUnit Tests from lab 3**
