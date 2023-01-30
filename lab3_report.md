@@ -5,7 +5,8 @@
 To create StringServer, I used the server structure we had on our second lab files. 
 So the codes are as follows
 
-`{
+```
+{
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
@@ -88,4 +89,4 @@ class StringServer {
     }
 }
 
-}` 
+``` 
